@@ -42,7 +42,6 @@ function playGame(Player1, Player2, playUntil) {
     let Player1Score = 0;
     let Player2Score = 0;
     let WinningPlayer;
-    let WinningScoreTally;
   while (Player1Score < playUntil && Player2Score < playUntil) {
     WinningPlayer = playRound(Player1, Player2);
     if (WinningPlayer === Player1) {
