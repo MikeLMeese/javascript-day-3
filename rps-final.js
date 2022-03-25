@@ -42,12 +42,15 @@ function playGame(Player1, Player2, playUntil) {
     let Player1Score = 0;
     let Player2Score = 0;
     let WinningPlayer;
+    let WinningScoreTally;
   while (Player1Score < playUntil && Player2Score < playUntil) {
     WinningPlayer = playRound(Player1, Player2);
     if (WinningPlayer === Player1) {
       Player1Score++;
+      console.log(Player1Score, '-', Player2Score);
     } else if (WinningPlayer === Player2) {
       Player2Score++;
+      console.log(Player1Score, '-', Player2Score);
     }
   }
   if (Player1Score === playUntil) {
@@ -56,4 +59,4 @@ function playGame(Player1, Player2, playUntil) {
     return `${Player2.name} is the winner!`;
   }
 }
-console.log(playGame(Player1, Player2, 7));
+console.log(playGame(Player1, Player2, 5));
